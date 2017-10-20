@@ -50,6 +50,16 @@ public class CreateLeads {
 		driver.findElement(By.xpath("//input[@name='code']")).sendKeys("560078");
 		driver.findElement(By.xpath("//input[@name='country']")).sendKeys("India");
 		driver.findElement(By.xpath("//textarea[@name='description']")).sendKeys("this is automation");
+		
+		driver.findElement(By.id("phone")).sendKeys("9999999999");
+		driver.findElement(By.id("mobile")).sendKeys("9999999999");
+		driver.findElement(By.xpath("//input[@name='email']")).sendKeys("leanrbybhnau@gmail.com");
+		
+		WebElement leadstatus = driver.findElement(By.name("leadstatus"));
+		select = new Select(leadstatus);
+		select.selectByVisibleText("Contact in Future");
+		driver.findElement(By.xpath("//input[@name='assigntype' and @value='T']")).click();
+		driver.findElement(By.xpath("//input[@title='Save [Alt+S]']")).click();
 	}
 
 }
