@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
@@ -31,6 +32,24 @@ public class CreateLeads {
 		Select select = new Select(driver.findElement(By.xpath("//select[@name='salutationtype']")));
 		select.selectByIndex(1);
 		driver.findElement(By.xpath("//input[@name='firstname']")).sendKeys("Bhanu Pratap");
+		driver.findElement(By.xpath("//input[@name='lastname']")).sendKeys("Singh");
+		driver.findElement(By.xpath("//input[@name='company']")).sendKeys("learnByBhanu");
+		driver.findElement(By.xpath("//input[@name='designation']")).sendKeys("youTube");
+		WebElement LeadSource = driver.findElement(By.name("leadsource"));
+		select = new Select(LeadSource);
+		select.selectByVisibleText("Employee");
+		
+		WebElement industry = driver.findElement(By.xpath("//select[@name='industry']"));
+		select = new Select(industry);
+		select.selectByVisibleText("Chemicals");
+		
+		driver.findElement(By.name("annualrevenue")).sendKeys("100000");
+		driver.findElement(By.id("noofemployees")).sendKeys("100");
+		driver.findElement(By.xpath("//*[@id='secondaryemail']")).sendKeys("leanrbybhnau@gmail.com");
+		driver.findElement(By.xpath("//textarea[@name='lane']")).sendKeys("Bihar Muzaffarpur");
+		driver.findElement(By.xpath("//input[@name='code']")).sendKeys("560078");
+		driver.findElement(By.xpath("//input[@name='country']")).sendKeys("India");
+		driver.findElement(By.xpath("//textarea[@name='description']")).sendKeys("this is automation");
 	}
 
 }
