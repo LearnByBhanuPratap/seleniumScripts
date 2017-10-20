@@ -31,7 +31,7 @@ public class HowToReadTableColumnData {
 		System.out.println(rowCount);
 		int colCount = driver.findElements(By.xpath("//table[@class='lvtBg']/tbody/tr/td/div/table/tbody/tr[3]/td")).size();
 		System.out.println(colCount);
-		for(int i = 3 ; i<rowCount; i++){
+		for(int i = 3 ; i<=rowCount; i++){
 			for(int j = 1 ; j<colCount; j++){
 				
 				//table[@class='lvtBg']/tbody/tr/td/div/table/tbody/tr[4]/td[4]
