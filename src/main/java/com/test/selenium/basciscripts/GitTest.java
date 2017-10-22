@@ -2,8 +2,8 @@ package com.test.selenium.basciscripts;
 
 public class GitTest {
 	
-	public void add(int add){
-		System.out.println(6+5);
+	public void cal12(int add){
+		System.out.println(6+5-9);
 		int c =2+3;
 		System.out.println(c);
 	}
