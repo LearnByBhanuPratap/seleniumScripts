@@ -4,7 +4,7 @@ public class GitTest {
 	
 	public void add(int add){
 		System.out.println(6);
-		int c =2+3;
+		int c =1+3;
 		System.out.println(c);
 	}
 	
