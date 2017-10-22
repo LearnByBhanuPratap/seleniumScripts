@@ -2,7 +2,7 @@ package com.test.selenium.basciscripts;
 
 public class GitTest {
 	
-	public void add(int add){
+	public void multiply(int add){
 		System.out.println(6);
 		int c =1+3;
 		System.out.println(c);
