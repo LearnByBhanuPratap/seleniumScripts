@@ -1,0 +1,22 @@
+Register HUB
+
+java -jar C:\Bhanu\selenium-server-standalone-3.8.1.jar -port 4444 -role hub
+
+hub Address
+
+http://172.16.125.9:4444/grid/register
+
+Register Node
+
+Go to each machine and Trigger command.
+ java -Dwebdriver.chrome.driver="C:\Bhanu\chromedriver.exe" -jar C:\Bhanu\selenium-server-standalone-3.8.1.jar -port 5001 -role node -hub http://172.16.125.9:4444/grid/register -browser "browserName=chrome,maxInstances=1"
+ 
+ Go to each machine and Trigger command.
+ java -Dwebdriver.chrome.driver="C:\Bhanu\chromedriver.exe" -jar C:\Bhanu\selenium-server-standalone-3.8.1.jar -port 5001 -role node -hub http://172.16.125.9:4444/grid/register -browser "browserName=chrome,maxInstances=1"
+ 
+ Grid console
+ 
+ http://172.16.125.9:4444/grid/console
+
+
+
