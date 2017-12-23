@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="LoginTest" parallel="tests" thread-count="2">
-  <test name="LoginTest1">
-  <parameter name="myBrowser" value="chrome1"/>
-    <classes>
-      <class name="com.test.selenium.basciscripts.Login"/>
-    </classes>
-  </test> <!-- Test -->
-  
-    <test name="LoginTest2">
-    <parameter name="myBrowser" value="chrome2"/>
-    <classes>
-      <class name="com.test.selenium.basciscripts.Login"/>
-    </classes>
-  </test> <!-- Test -->
+	<test name="FacebookLogin1">
+		<parameter name="myBrowser" value="chrome1" />
+		<classes>
+			<class name="com.test.selenium.basciscripts.FacebookLogin" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="FacebookLogin2">
+		<parameter name="myBrowser" value="chrome2" />
+		<classes>
+			<class name="com.test.selenium.basciscripts.FacebookLogin" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="FacebookLogin3">
+		<parameter name="myBrowser" value="chrome1" />
+		<classes>
+			<class name="com.test.selenium.basciscripts.FacebookLogin" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="FacebookLogin4">
+		<parameter name="myBrowser" value="chrome2" />
+		<classes>
+			<class name="com.test.selenium.basciscripts.FacebookLogin" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->
