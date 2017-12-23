@@ -34,8 +34,7 @@ public class BaseClass {
            
         }
         else if(myBrowser.equals("chrome2")){
-            new DesiredCapabilities();
-			DesiredCapabilities capability = DesiredCapabilities.firefox();
+			DesiredCapabilities capability = DesiredCapabilities.chrome();
             capability.setBrowserName("chrome");
             capability.setPlatform(Platform.WINDOWS);
             driver = new RemoteWebDriver(new URL("http://172.16.125.9:5001/wd/hub"), capability);
