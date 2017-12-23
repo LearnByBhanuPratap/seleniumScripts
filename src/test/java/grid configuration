@@ -9,14 +9,32 @@ http://172.16.125.9:4444/grid/register
 Register Node
 
 Go to each machine and Trigger command.
- java -Dwebdriver.chrome.driver="C:\Bhanu\chromedriver.exe" -jar C:\Bhanu\selenium-server-standalone-3.8.1.jar -port 5001 -role node -hub http://172.16.125.9:4444/grid/register -browser "browserName=chrome,maxInstances=1"
+ java -Dwebdriver.chrome.driver="C:\Bhanu\chromedriver.exe" -jar C:\Bhanu\selenium-server-standalone-3.8.1.jar -port 5001 -role node -hub http://172.16.124.213:4444/grid/register -browser "browserName=chrome,maxInstances=1"
  
  Go to each machine and Trigger command.
- java -Dwebdriver.chrome.driver="C:\Bhanu\chromedriver.exe" -jar C:\Bhanu\selenium-server-standalone-3.8.1.jar -port 5001 -role node -hub http://172.16.125.9:4444/grid/register -browser "browserName=chrome,maxInstances=1"
+ java -Dwebdriver.chrome.driver="C:\Bhanu\chromedriver.exe" -jar C:\Bhanu\selenium-server-standalone-3.8.1.jar -port 5001 -role node -hub http://172.16.124.213:4444/grid/register -browser "browserName=chrome,maxInstances=1"
  
  Grid console
  
  http://172.16.125.9:4444/grid/console
+ 
+ What is Selenium-Grid?
+    Selenium-Grid allows you run your tests on different machines against different browsers in parallel. That is, 
+    running multiple tests at the same time against different machines running different browsers and operating systems. 
+    Essentially, Selenium-Grid support distributed test execution. It allows for running your tests in a distributed test 
+    execution environment.
+
+When to Use It
+    Generally speaking, there’s two reasons why you might want to use Selenium-Grid.
+     To run your tests against multiple browsers, multiple versions of browser, and browsers running on different operating
+     systems.
+     To reduce the time it takes for the test suite to complete a test pass.
+     
+Issue
+
+org.openqa.selenium.WebDriverException: unknown error: failed to write prefs file
+
+Soluction:clean disc space issue
 
 
 

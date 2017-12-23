@@ -10,17 +10,18 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 public class BaseClass {
 	 
     //ThreadLocal will keep local copy of driver
-    public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<RemoteWebDriver>();
+    public ThreadLocal<RemoteWebDriver> dr = new ThreadLocal<RemoteWebDriver>();
  
     @BeforeTest
     //Parameter will get browser from testng.xml on which browser test to run
     @Parameters("myBrowser")
-    public void beforeClass(String myBrowser) throws MalformedURLException{
+    public void beforeClass(@Optional("chrome1") String myBrowser) throws MalformedURLException{
  
         RemoteWebDriver driver = null;
  
@@ -49,17 +50,17 @@ public class BaseClass {
     }
  
     public WebDriver getDriver() {
-        return driver.get();
+        return dr.get();
     }
  
-    public void setWebDriver(RemoteWebDriver dr) {
-    	driver.set(dr);
+    public void setWebDriver(RemoteWebDriver driver) {
+    	dr.set(driver);
     }
  
     @AfterClass
     public void afterClass(){
-        //getDriver().quit();
-        driver.set(null);
+        getDriver().quit();
+        //dr.set(null);
  
     }
  
