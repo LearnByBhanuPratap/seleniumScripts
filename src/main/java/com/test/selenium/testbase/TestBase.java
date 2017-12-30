@@ -23,12 +23,12 @@ public class TestBase {
 				System.out.println(System.getProperty("user.dir"));
 				System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir") + "/drivers/geckodriver.exe");
 				driver = new FirefoxDriver();
-				Reporter.log("running test in : "+myBrowser);
+		
 			} else if (myBrowser.equalsIgnoreCase("chrome")) {
 				// https://chromedriver.storage.googleapis.com/index.html
 				System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + "/drivers/chromedriver.exe");
 				driver = new ChromeDriver();
-				Reporter.log("running test in : "+myBrowser);
+				
 			}
 		} else if (System.getProperty("os.name").contains("Mac")) {
 			System.out.println(System.getProperty("os.name"));
@@ -36,11 +36,11 @@ public class TestBase {
 				System.out.println(System.getProperty("user.dir"));
 				System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/drivers/geckodriver");
 				driver = new FirefoxDriver();
-				Reporter.log("running test in : "+myBrowser);
+			
 			} else if (myBrowser.equalsIgnoreCase("chrome")) {
 				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver");
 				driver = new ChromeDriver();
-				Reporter.log("running test in : "+myBrowser);
+				
 			}
 		}
 	}
